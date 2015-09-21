@@ -10,16 +10,18 @@ def is_unique_string(str):
   str -- string
   """
 
+  str = str.strip()
+
   strs = []
   for i in range(0, len(str)):
     strs.append(str[i])
 
-  is_unique_flags = {}
+  unique_flags = {}
   for i in range(0, len(str)):
     val = strs[i]
-    if val in is_unique_flags and is_unique_flags[val] == True:
+    if val in unique_flags and unique_flags[val] == True:
       return False
-    is_unique_flags[val] = True
+    unique_flags[val] = True
 
   return True
 
