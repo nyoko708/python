@@ -12,13 +12,9 @@ def is_unique_string(str):
 
   str = str.strip()
 
-  strs = []
-  for i in range(0, len(str)):
-    strs.append(str[i])
-
   unique_flags = {}
   for i in range(0, len(str)):
-    val = strs[i]
+    val = str[i]
     if val in unique_flags and unique_flags[val] == True:
       return False
     unique_flags[val] = True
